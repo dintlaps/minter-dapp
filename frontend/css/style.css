@@ -27,7 +27,7 @@ body {
   background-color: var(--bg-color);
   display: flex;
   flex-flow: column;
-  height: 100vh;
+ 
   color: var(--font-color);
   font-family: var(--font-primary);
 }
@@ -39,7 +39,7 @@ body {
   margin: 0 auto;
   padding: 1rem 2rem;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* HEADER */
@@ -343,6 +343,9 @@ section {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
+  #main_wait_div{
+    margin-top: 100px ;
+  }
   .menu {
     gap: 1rem;
   }
