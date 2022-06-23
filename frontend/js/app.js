@@ -82,15 +82,14 @@ const updateConnectStatus = async () => {
     onboardButton.innerText = "Install MetaMask!";
     onboardButton.onclick = () => {
       // CHECKING ON CLICK OF INSTALL METAMASK BUTTON THAT BROWSER IS MOBILE OR NOT 
-
       if (window.mobileCheck() == true) {
-        if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) 
-          {
-            window.location.replace("dapp://" + App_URL)
-          }
-          else {
+        // if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) 
+        //   {
+        //    window.location.replace("dapp://" + App_URL)
+        //   }
+        //   else {
           openMetaMaskUrl("http://metamask.app.link/dapp/"+App_URL);
-          }
+          // }
       }
       else {
         onboardButton.innerText = "Connecting...";
