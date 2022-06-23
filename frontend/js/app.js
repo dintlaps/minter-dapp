@@ -85,10 +85,11 @@ const updateConnectStatus = async () => {
       if (window.mobileCheck() == true) {
         // if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) 
         //   {
+        //     alert()
         //    window.location.replace("dapp://" + App_URL)
         //   }
         //   else {
-          openMetaMaskUrl("http://metamask.app.link/dapp/"+App_URL);
+          openMetaMaskUrl("https://metamask.app.link/dapp/"+App_URL);
           // }
       }
       else {
