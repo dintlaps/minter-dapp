@@ -79,18 +79,17 @@ const updateConnectStatus = async () => {
   const notConnected = document.querySelector('.not-connected');
   const spinner = document.getElementById("spinner");
   if (!MetaMaskOnboarding.isMetaMaskInstalled()) {
-    onboardButton.innerText = "Install MetaMask!";
+    
+    if (window.mobileCheck() == true) {   
+      onboardButton.innerText = "Connect  MetaMask!";
+    }else{
+      onboardButton.innerText = "Install MetaMask!";
+    }
+
     onboardButton.onclick = () => {
       // CHECKING ON CLICK OF INSTALL METAMASK BUTTON THAT BROWSER IS MOBILE OR NOT 
-      if (window.mobileCheck() == true) {
-        // if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i)) 
-        //   {
-        //     alert()
-        //    window.location.replace("dapp://" + App_URL)
-        //   }
-        //   else {
-          openMetaMaskUrl("https://metamask.app.link/dapp/"+App_URL);
-          // }
+      if (window.mobileCheck() == true) {       
+        openMetaMaskUrl("https://metamask.app.link/dapp/"+App_URL);
       }
       else {
         onboardButton.innerText = "Connecting...";

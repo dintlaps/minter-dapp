@@ -343,8 +343,14 @@ section {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
+  .container{
+    padding: 0.7rem 1rem;
+  }
+  #logo_img{
+    height: 50px !important;
+  }
   #main_wait_div{
-    margin-top: 100px ;
+    margin-top: 50px ;
   }
   .menu {
     gap: 1rem;
